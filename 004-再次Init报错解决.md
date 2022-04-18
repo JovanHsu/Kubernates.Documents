@@ -41,3 +41,12 @@ To see the stack trace of this error execute with --v=5 or higher
    > ```
    > sudo systemctl restart docker
    > ```
+
+
+
+```
+sudo kubeadm reset -f --cri-socket /var/run/crio/crio.sock
+sudo rm -rf /etc/cni /etc/kubernetes /var/lib/dockershim /var/lib/etcd /var/lib/kubelet /var/run/kubernetes ~/.kube/*
+sudo systemctl restart docker
+```
+
